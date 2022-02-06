@@ -144,6 +144,8 @@ role = Role.new({character_name: "Selina Kyle", movie_id: movie.id })
 role.save
 # link director with movie:
 
+person = Person.new({name: "Christopher Nolan"})
+person.save
 
 # Batman Begins
 movie = Movie.where({title: "Batman Begins"})[0]
@@ -242,7 +244,7 @@ role.save
 
 
 for movie in Movie.all
-    puts "#{movie.title}   #{movie.year_released}  #{movie.rated}"
+    puts "#{movie.title}   #{movie.year_released}  #{movie.rated} #{movie.director}"
 end
 
 for movie in Movie.all
