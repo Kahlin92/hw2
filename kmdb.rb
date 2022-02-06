@@ -88,10 +88,7 @@ puts ""
 # TODO!
 
 # Prints a header for the cast output
-puts ""
-puts "Top Cast"
-puts "========"
-puts ""
+
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
@@ -142,8 +139,8 @@ role = Role.new({character_name: "John Blake", movie_id: movie.id })
 role.save
 role = Role.new({character_name: "Selina Kyle", movie_id: movie.id })
 role.save
-# link director with movie:
 
+# link director with movie:
 person = Person.new({name: "Christopher Nolan"})
 person.save
 
@@ -247,6 +244,10 @@ for movie in Movie.all
     puts "#{movie.title}   #{movie.year_released}  #{movie.rated} #{movie.director}"
 end
 
+puts ""
+puts "Top Cast"
+puts "========"
+puts ""
 for movie in Movie.all
 
     for role in movie.roles 
